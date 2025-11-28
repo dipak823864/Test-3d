@@ -1,0 +1,68 @@
+Camera:
+  Pos: [0, 3, 8]
+  LookAt: [0, 0, 0]
+  FOV: 50
+
+Materials:
+  - Color: [0.9, 0.9, 0.9] # White Floor
+    Metallic: 0.0
+    Roughness: 0.8
+  - Color: [1.0, 0.6, 0.2] # Orange (Clay)
+    Metallic: 0.0
+    Roughness: 0.6
+  - Color: [0.2, 0.8, 0.2] # Green (Plastic)
+    Metallic: 0.0
+    Roughness: 0.2
+  - Color: [0.3, 0.3, 0.3] # Dark Grey (Metal)
+    Metallic: 0.8
+    Roughness: 0.2
+
+Objects:
+  # Floor
+  - Type: 4 # Plane
+    Pos: [0, -1.5, 0]
+    Scale: [1, 1, 1]
+    Mat: 0
+    Op: 0
+
+  # --- Left: The "Bite" (Sphere subtracting from Cube) ---
+  # Cube
+  - Type: 1
+    Pos: [-3.5, 0, 0]
+    Scale: [1.2, 1.2, 1.2]
+    Mat: 1
+    Op: 0
+  # Sphere (Bite)
+  - Type: 0
+    Pos: [-2.8, 0.8, 0.8] # Corner bite
+    Scale: [1.0, 1.0, 1.0]
+    Mat: 1
+    Op: 1 # Subtract
+
+  # --- Center: The "Well" (Cylinder subtracting from Cube) ---
+  # Cube
+  - Type: 1
+    Pos: [0, 0, 0]
+    Scale: [1.2, 1.2, 1.2]
+    Mat: 2
+    Op: 0
+  # Cylinder (Hole)
+  - Type: 2
+    Pos: [0, 0.5, 0] # Top face
+    Scale: [0.8, 1.0, 0] # Radius 0.8, Height 1.0
+    Mat: 2
+    Op: 1 # Subtract
+    
+  # --- Right: The "Slice" (Box subtracting from Sphere) ---
+  # Sphere
+  - Type: 0
+    Pos: [3.5, 0, 0]
+    Scale: [1.3, 1.3, 1.3]
+    Mat: 3
+    Op: 0
+  # Box (Slice)
+  - Type: 1
+    Pos: [4.0, 0, 0] # Cutting right side
+    Scale: [1.0, 2.0, 2.0]
+    Mat: 3
+    Op: 1 # Subtract

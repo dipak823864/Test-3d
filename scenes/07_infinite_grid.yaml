@@ -1,0 +1,21 @@
+Camera:
+  Pos: [2, 2, 2]
+  LookAt: [10, 0, 10]
+  FOV: 60
+
+Materials:
+  - Color: [0.1, 0.1, 0.1] # Floor
+    Metallic: 0.0
+    Roughness: 0.5
+  - Color: [0.0, 0.8, 1.0] # Glowing Spheres
+    Metallic: 0.9
+    Roughness: 0.1
+    Emission: [0.0, 0.8, 1.0] # Cyan Glow
+
+Objects:
+  # Infinite Spheres
+  - Type: 0
+    Pos: [0, 0, 0]
+    Scale: [0.5, 0.5, 0.5]
+    Mat: 1
+    Op: 6 # REPEAT

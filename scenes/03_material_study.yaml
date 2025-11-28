@@ -1,0 +1,42 @@
+Camera:
+  Pos: [0, 2, 6]
+  LookAt: [0, 0, 0]
+  FOV: 50
+
+Materials:
+  - Color: [0.8, 0.05, 0.05] # Matte Red (Deep Red)
+    Metallic: 0.0
+    Roughness: 1.0
+  - Color: [0.0, 0.2, 0.8] # Shiny Plastic Blue (Deep Blue)
+    Metallic: 0.0
+    Roughness: 0.1
+  - Color: [1.0, 0.76, 0.33] # Gold (Physical Gold Color)
+    Metallic: 1.0
+    Roughness: 0.15
+  - Color: [0.5, 0.5, 0.5] # Floor
+    Metallic: 0.0
+    Roughness: 0.3 # Glossy floor
+
+Objects:
+  # Matte Red
+  - Type: 0
+    Pos: [-2.2, 0.1, 0] # Raised significantly to fix spikes
+    Scale: [1, 1, 1]
+    Mat: 0
+    
+  # Shiny Blue
+  - Type: 0
+    Pos: [0, 0.1, 0] # Raised significantly
+    Scale: [1, 1, 1]
+    Mat: 1
+    
+  # Gold
+  - Type: 0
+    Pos: [2.2, 0.1, 0] # Raised significantly
+    Scale: [1, 1, 1]
+    Mat: 2
+    
+  # Floor
+  - Type: 4
+    Pos: [0, -1, 0]
+    Mat: 3

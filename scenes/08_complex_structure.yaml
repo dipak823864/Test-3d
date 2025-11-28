@@ -1,0 +1,54 @@
+Camera:
+  Pos: [3, 3, 3]
+  LookAt: [0, 0, 0]
+  FOV: 60
+
+Materials:
+  - Color: [0.1, 0.1, 0.1] # Dark Floor
+    Metallic: 0.0
+    Roughness: 0.8
+  - Color: [0.8, 0.8, 0.8] # Steel
+    Metallic: 1.0
+    Roughness: 0.3
+  - Color: [0.0, 1.0, 0.2] # Green Energy
+    Metallic: 0.0
+    Roughness: 0.1
+    Emission: [0.0, 2.0, 0.4] # Bright Glow
+
+Objects:
+  # Floor
+  - Type: 4 # Plane
+    Pos: [0, -1, 0]
+    Scale: [1, 1, 1]
+    Mat: 0
+    Op: 0
+
+  # Central Core (Glowing Sphere)
+  - Type: 0
+    Pos: [0, 0, 0]
+    Scale: [0.8, 0.8, 0.8]
+    Mat: 2
+    Op: 0
+    
+  # Protective Ring 1 (Torus)
+  - Type: 5
+    Pos: [0, 0, 0]
+    Rot: [0, 0, 0.5] # Tilted
+    Scale: [1.2, 0.1, 0] # Radius 1.2, Thickness 0.1
+    Mat: 1
+    Op: 0
+    
+  # Protective Ring 2 (Torus)
+  - Type: 5
+    Pos: [0, 0, 0]
+    Rot: [0.5, 0, 0] # Tilted differently
+    Scale: [1.5, 0.1, 0]
+    Mat: 1
+    Op: 0
+    
+  # Base (Smooth Union with Floor? No, separate)
+  - Type: 3 # RoundBox
+    Pos: [0, -1, 0]
+    Scale: [0.5, 0.1, 0.5]
+    Mat: 1
+    Op: 0

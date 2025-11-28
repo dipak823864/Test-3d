@@ -1,0 +1,28 @@
+Camera:
+  Pos: [0, 2, 8]
+  LookAt: [0, 0, 0]
+  FOV: 50
+
+Materials:
+  - Color: [0.7, 0.7, 0.7]
+
+Objects:
+  # Grandparent
+  - Type: 1
+    Pos: [0, 2, 0]
+    Scale: [0.5, 0.5, 0.5]
+    Mat: 0
+    
+  # Parent (Rotated relative to GP)
+  - Type: 1
+    Pos: [1, 1, 0]
+    Rot: [0, 0, 0.5]
+    Scale: [0.4, 0.4, 0.4]
+    Mat: 0
+    
+  # Child (Rotated relative to Parent)
+  - Type: 1
+    Pos: [2, 0, 0]
+    Rot: [0, 0, 1.0]
+    Scale: [0.3, 0.3, 0.3]
+    Mat: 0

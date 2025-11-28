@@ -1,0 +1,59 @@
+Camera:
+  Pos: [8.0, 5.0, 8.0]
+  LookAt: [0.0, 2.0, 0.0]
+  FOV: 50.0
+
+Materials:
+  - Color: [0.5, 0.5, 0.5] # 0 Floor
+    Metallic: 0.0
+    Roughness: 0.8
+  - Color: [1.0, 0.5, 0.0] # 1 Orange
+    Metallic: 0.0
+    Roughness: 0.3
+  - Color: [0.2, 0.2, 0.2] # 2 Metal
+    Metallic: 0.8
+    Roughness: 0.4
+  - Color: [0.9, 0.9, 0.9] # 3 Chrome
+    Metallic: 1.0
+    Roughness: 0.1
+  - Color: [0.6, 0.4, 0.2] # 4 Wood
+    Metallic: 0.0
+    Roughness: 0.8
+
+Lights:
+  - Pos: [5.0, 8.0, 5.0]
+    Color: [1.5, 1.35, 1.2]
+    Intensity: 1.0
+  - Pos: [-5.0, 4.0, -5.0]
+    Color: [0.1, 0.15, 0.25]
+    Intensity: 1.0
+
+Objects:
+  # Floor
+  - Type: 4
+    Pos: [0, 0, 0]
+    Mat: 0
+
+  # Robot Base
+  - Type: 3
+    Pos: [0, 0, 0]
+    Scale: [1.2, 0.2, 1.2]
+    Mat: 2
+
+  # Turret
+  - Type: 2
+    Pos: [0, 0.2, 0]
+    Scale: [0.8, 0.4, 0.8]
+    Mat: 1
+
+  # Arm
+  - Type: 3
+    Pos: [0, 1.0, 0]
+    Scale: [0.3, 1.6, 0.3]
+    Mat: 1
+
+  # Crate
+  - Type: 1
+    Pos: [2.5, 0.5, 0]
+    Scale: [0.5, 0.5, 0.5]
+    Mat: 4
